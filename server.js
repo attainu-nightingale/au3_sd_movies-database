@@ -8,6 +8,7 @@ var app = express();
 var login = require('./Routes/login');
 var signup = require('./Routes/signup');
 var news = require('./Routes/news');
+var myreviews = require('./routes/myreviews');
 //app.use(upload.array());
 app.use(cookieParser());
 app.use(session({ secret: "Your secret key" }));
@@ -20,7 +21,8 @@ app.use(bodyparser.json());
 app.use(express.static('public'));
 app.use('/login', login);
 app.use('/signup', signup);
-app.use('/news', news);
+app.use('/myreviews', myreviews);
+app.use('/', news);
 
 
 /*app.get('/',function(req,res){
