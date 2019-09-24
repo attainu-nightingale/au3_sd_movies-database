@@ -5,9 +5,9 @@ var session = require('express-session');
 var mongodb = require('mongodb');
 var ObjectID = require('mongodb').ObjectID;
 var client = mongodb.MongoClient;
-var url = 'mongodb://localhost:27017';
-var dbName = 'testmovie';
-var port = 4200;
+var dbName = 'movieDB';
+var url;
+var port = process.env.PORT || 4200;
 var app = express();
 
 // defining routes
@@ -20,8 +20,13 @@ var addreview = require('./routes/addreview');
 var viewreviews = require('./routes/viewreview');
 var myreviews = require('./routes/myreviews');
 
+if (process.env.DB_URL)
+    url = process.env.DB_URL;
+else
+    url = "mongodb://127.0.0.1:27017";
+
 // connection to the db
-client.connect(url, { useNewUrlParser: true }, function(err, client) {
+client.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, function(err, client) {
     if (err)
         throw err;
     app.locals.db = client.db(dbName);
