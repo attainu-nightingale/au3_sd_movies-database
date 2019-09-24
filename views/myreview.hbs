@@ -53,6 +53,7 @@
 {{/each}}
 
 <script>
+  //edit buttton for a particular review of an user using Ajax
   $('.editButton').click(function (e) {
     $('#edit').modal();
     var data = "{{reponseData}}";
@@ -84,6 +85,8 @@
     });
 
   });
+
+  // Delete button for deleting the particular review of an user using Ajax
   $('.deleteButton').click(function (e) {
     var id = $(this).prop('value');
     $.ajax({
