@@ -27,7 +27,8 @@
     "express-toastr": "^2.0.2",
     "hbs": "^4.0.4",
     "mongodb": "^3.3.2",
-    "req-flash": "0.0.3"
+    "req-flash": "0.0.3",
+    "request": "^2.88.0"
   },
   "devDependencies": {},
   "repository": {
