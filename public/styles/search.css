@@ -4,15 +4,18 @@ body {
     background-image: url(/images/search.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .searchbar {
     margin-bottom: auto;
-    margin-top: 74px;
+    margin-top: 132px;
     height: 60px;
     background-color: #1B2131;
     border-radius: 30px;
     padding: 10px;
+    margin-right: 122px;
 }
 
 .search_input {

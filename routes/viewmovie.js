@@ -21,7 +21,7 @@ var movie_key = process.env.MOVIE_API_KEY;
 
 router.get('/:movieId', function(req, res) {
     var movieId = req.params;
-    res.render('view.hbs', { style: '../../styles/style.css', title: 'Flickstermovie-Details', search: 'active', data: JSON.stringify(movieId), movie_key: JSON.stringify(movie_key), movie_API: JSON.stringify(movie_api), li: 'margin-left: 500px;', script: '../../scripts/movie-view.js' });
+    res.render('view.hbs', { style: '../../styles/style.css', title: 'Flickstermovie-Details', search: 'active', data: JSON.stringify(movieId), movie_key: JSON.stringify(movie_key), movie_API: JSON.stringify(movie_api), li: 'margin-left: 500px; width:5rem;', script: '../../scripts/movie-view.js' });
 });
 
 module.exports = router;
