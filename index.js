@@ -36,7 +36,7 @@ client.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, functio
 app.set('view engine', 'hbs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(session({ secret: "This is personalized secret session which is used to sign a cookie" }));
+app.use(session({ secret: "This is personalized secret session which is used to sign a cookie", resave: false, saveUninitialized: true }));
 app.use(express.static(__dirname + '/public'));
 
 // routes middleware

@@ -36,9 +36,14 @@
                 dom += '<h1 class="card-title">';
                 dom += data.Title;
                 dom += '</h1>';
-                dom += '<img class="card-img-bottom" src="' + data.Poster + '" alt="card" id="moviecard" width="600" height="600">';
+                  if (data.Poster != 'N/A') {
+                    dom += '<img class="card-img-bottom" src="' + data.Poster + '" alt="card" id="moviecard" width="600" height="600">';
+                }
+                else {
+                   dom += "<img class='card-img-top' src='/images/noposter.jpg' alt='card' id='moviecard' width='600' height='600'>";
+                }
                 dom += '</div></div>';
-                dom += '<button type="button" class="btn btn-reviews float-center" style="font-family:Helvetica; margin-left:167px;margin-top:20px;" id="allreviews"><i class="far fa-eye"></i> View Reviews</button></div>';
+                dom += '<button type="button" class="btn btn-reviews float-center" style="font-family:Helvetica; margin-left:110px;margin-top:20px;" id="allreviews"><i class="far fa-eye"></i> View Reviews</button></div>';
                 dom += '<div class="col col-sm-6">';
                 dom += '<div id="information">'
                 dom += '<h6><b>Genre: </b>' + data.Genre + '</h6>';
@@ -52,7 +57,7 @@
                 dom += '<p class="plot"><b>Plot:</b> ' + data.Plot + '</p>';
                 dom += '<div id="reviews">';
                 dom += '<div class="form-group"><label for="comment"><b>Review:</b></label> <textarea class="form-control" rows="4" id="review"></textarea> </div>';
-                dom += '<button type="button" class="btn btn-primary float-center" style="font-family:Helvetica; margin-left:155px;" value="{{user}}"  id="addreview">+Add Review</button>';
+                dom += '<button type="button" class="btn btn-primary float-center" style="font-family:Helvetica;" value="{{user}}"  id="addreview">+Add Review</button>';
                 dom += '</div>';
 
                 $('#moviedetails').append(dom);

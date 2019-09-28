@@ -1,9 +1,13 @@
 body {
+    height: 100%;
     box-sizing: border-box;
     background-image: url("/images/signup.jpg");
-    background-repeat: round;
+    background-repeat: no-repeat;
     background-origin: content-box;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-y: hidden;
 }
 
 .form-control {

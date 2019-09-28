@@ -20,7 +20,7 @@ router.get('/', function(req, res) {
         if (err)
             throw err;
         if (result) {
-            res.render('myreview.hbs', { style: '../../styles/myreview.css', data: result, reponseData: JSON.stringify(result), title: 'Flickster-Myreviews', myreviews: 'active', script: '../../scripts/search.js', li: 'margin-left: 500px;' });
+            res.render('myreview.hbs', { style: '../../styles/myreview.css', data: result, reponseData: JSON.stringify(result), title: 'Flickster-Myreviews', myreviews: 'active', script: '../../scripts/search.js', li: 'margin-left: 500px; width:5rem;' });
         }
     });
 });

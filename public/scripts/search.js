@@ -7,5 +7,8 @@ window.onload = function() {
     if (location[1] == 'signup' || location[1] == 'login' || location[1] == 'myreviews' || location[1] == "") {
         $("#newsearchbar").remove();
     }
-    // searchbar for searching a movie using AJAX request
+    if (location[1] == 'logout') {
+        sessionStorage.clear();
+    }
+
 }

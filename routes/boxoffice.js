@@ -20,7 +20,7 @@ var movie_key = process.env.MOVIE_API_KEY;
 
 // get request for search
 router.get('/', function(req, res) {
-    res.render('search.hbs', { style: '../../styles/search.css', title: 'Flickster Movie', script: '../../scripts/search.js', movie_API: JSON.stringify(movie_api), movie_key: JSON.stringify(movie_key), search: 'active', li: 'margin-left: 500px;' });
+    res.render('search.hbs', { style: '../../styles/search.css', title: 'Flickster Movie', script: '../../scripts/search.js', movie_API: JSON.stringify(movie_api), movie_key: JSON.stringify(movie_key), search: 'active', li: 'margin-left: 500px; width:5rem;' });
 
 });
 

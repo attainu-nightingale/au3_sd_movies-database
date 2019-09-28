@@ -21,7 +21,7 @@ router.get('/', function(req, res) {
                     style: '../../styles/news.css'
                 });
             } else if (req.session.loggedIn) {
-                res.render('news.hbs', { articles: body, news: 'active', script: '../../scripts/search.js', li: 'margin-left: 500px;', style: '../../styles/news.css', title: 'Flickster News' });
+                res.render('news.hbs', { articles: body, news: 'active', script: '../../scripts/search.js', li: 'margin-left: 500px; width:5rem;', style: '../../styles/news.css', title: 'Flickster News' });
             }
         })
 });
